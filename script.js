@@ -10,15 +10,14 @@ function addProduct() {
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
 
   //   function addProduct() {
-  const para = document.createElement("p");
+  const para = document.createElement("div");
   para.innerHTML = document.getElementById("product").value;
   document.getElementById("container2").appendChild(para);
-  //   }
-
+  //   let input = document.getElementById("");
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
   // Except you do not need to include the value at the end.
-
+  let output = document.getElementById("output");
   // CHALLENGE SECTION:
   // If you feel up for a challenge, try and use an if statement if(condition){run this code}
   // to return an alert if the input is empty. You will need to get the id as in previous assignments above
@@ -26,7 +25,13 @@ function addProduct() {
   // If the code you will want to run after checking the condition is to run the alert method.
   // If you do not know the alert method, look it up on google using the w3schools,
   // do not forget to include a return false at the end to not reload your webpage.
-
+  function onsubmit(e) {
+    e.preventDefault();
+    if (product.value === "") {
+      false.classList.add("error");
+      false.innerHTML = " Please Fill In Box";
+    }
+  }
   // Assignment 2:
   // You need to put the value of the input into an array to call later.
   // That means you will need to assign your input using brackets around it
