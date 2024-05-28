@@ -8,16 +8,14 @@ function addProduct() {
   let input = document.getElementById("product").value;
   // You will need to create a div using javascript,
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
-
-  //   function addProduct() {
   const para = document.createElement("div");
   para.innerHTML = document.getElementById("product").value;
   document.getElementById("container2").appendChild(para);
-  //   let input = document.getElementById("");
+  document.getElementById("newProduct").reset();
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
   // Except you do not need to include the value at the end.
-  let output = document.getElementById("output");
+  //   let output = document.getElementById("output");
   // CHALLENGE SECTION:
   // If you feel up for a challenge, try and use an if statement if(condition){run this code}
   // to return an alert if the input is empty. You will need to get the id as in previous assignments above
@@ -25,23 +23,18 @@ function addProduct() {
   // If the code you will want to run after checking the condition is to run the alert method.
   // If you do not know the alert method, look it up on google using the w3schools,
   // do not forget to include a return false at the end to not reload your webpage.
-  function onsubmit(e) {
-    e.preventDefault();
-    if (product.value === "") {
-      false.classList.add("error");
-      false.innerHTML = " Please Fill In Box";
-    }
-  }
+
   // Assignment 2:
   // You need to put the value of the input into an array to call later.
   // That means you will need to assign your input using brackets around it
   // to a newProduct variable, remember that assign can mean the equals sign(=).
   let newProduct = { input };
+  newProduct.push(`${input}`);
   // Hint: You could push your product to a new array once you create a new variable
   // that makes a single object {} with the product variable you made above.
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
   // use console.log and pass in the product array to check if you have it setup correctly.
-  // console.log(productArray)
+  //   console.log(productArray);
 
   // Assignment 3:
   // Hint: Use a loop(look up the javascript loop on w3schools.) on your product array and set the max length of the loop to the array using
