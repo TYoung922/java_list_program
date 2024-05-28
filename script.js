@@ -5,9 +5,15 @@ productArray = [];
 function addProduct() {
   // Assignment 1
   // You need to change the id that this collects to product.
-  let input = document.getElementById("input").value;
+  let input = document.getElementById("product").value;
   // You will need to create a div using javascript,
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
+
+  //   function addProduct() {
+  const para = document.createElement("p");
+  para.innerHTML = document.getElementById("product").value;
+  document.getElementById("container2").appendChild(para);
+  //   }
 
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
